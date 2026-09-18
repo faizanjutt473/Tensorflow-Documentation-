@@ -1,129 +1,235 @@
 toc:
-- title: "TensorFlow guide"
-  path: /guide/
+- title: "TensorFlow tutorials"
+  path: /tutorials
+- title: "Quickstart for beginners"
+  path: /tutorials/quickstart/beginner
+- title: "Quickstart for experts"
+  path: /tutorials/quickstart/advanced
 
-- heading: "TensorFlow basics"
-- title: "Overview"
-  path: /guide/basics
-- title: "Tensors"
-  path: /guide/tensor
-- title: "Variables"
-  path: /guide/variable
-- title: "Automatic differentiation"
-  path: /guide/autodiff
-- title: "Graphs and functions"
-  path: /guide/intro_to_graphs
-- title: "Modules, layers, and models"
-  path: /guide/intro_to_modules
-- title: "Training loops"
-  path: /guide/basic_training_loops
+- heading: "Beginner"
+  style: divider
 
-- heading: "Keras"
-- title: "Overview"
-  path: /guide/keras
-- include: /guide/keras/_toc.yaml
+- title: "ML basics with Keras"
+  style: accordion
+  section:
+  - title: "Basic image classification"
+    path: /tutorials/keras/classification
+  - title: "Basic text classification"
+    path: /tutorials/keras/text_classification
+  - title: "Text classification with TF Hub"
+    path: /tutorials/keras/text_classification_with_hub
+  - title: "Regression"
+    path: /tutorials/keras/regression
+  - title: "Overfit and underfit"
+    path: /tutorials/keras/overfit_and_underfit
+  - title: "Save and load"
+    path: /tutorials/keras/save_and_load
+  - title: "Tune hyperparameters with the Keras Tuner"
+    path: /tutorials/keras/keras_tuner
+  - title: "More examples on keras.io"
+    path: https://keras.io/examples/
+    status: external
 
-- heading: "Build with Core"
-  status: new
-- title: "Overview"
-  path: /guide/core/index
-- title: "Quickstart for Core"
-  path: /guide/core/quickstart_core
-- title: "Logistic regression"
-  path: /guide/core/logistic_regression_core
-- title: "Multilayer perceptrons"
-  path: /guide/core/mlp_core
-- title: "Matrix approximation"
-  path: /guide/core/matrix_core
-- title: "Custom optimizers"
-  path: /guide/core/optimizers_core
-- title: "DTensor with Core APIs"
-  path: /guide/core/distribution
-  status: experimental
+- title: "Load and preprocess data"
+  style: accordion
+  section:
+  - title: "Images"
+    path: /tutorials/load_data/images
+  - title: "Video"
+    path: /tutorials/load_data/video
+    status: new
+  - title: "CSV"
+    path: /tutorials/load_data/csv
+  - title: "NumPy"
+    path: /tutorials/load_data/numpy
+  - title: "pandas.DataFrame"
+    path: /tutorials/load_data/pandas_dataframe
+  - title: "TFRecord and tf.Example"
+    path: /tutorials/load_data/tfrecord
+  - title: "Additional formats with tf.io"
+    path: https://github.com/tensorflow/io#tensorflow-io
+    status: external
+  - title: "Text"
+    path: /tutorials/load_data/text
+  - heading: More text loading
+  - title: "Unicode"
+    path: /text/guide/unicode
+    status: external
+  - title: "Subword Tokenization"
+    path: /text/guide/subwords_tokenizer
+    status: external
 
-- heading: "TensorFlow in depth"
-- title: "Tensor slicing"
-  path: /guide/tensor_slicing
-- title: "Advanced autodiff"
-  path: /guide/advanced_autodiff
-- title: "Ragged tensor"
-  path: /guide/ragged_tensor
-- title: "Sparse tensor"
-  path: /guide/sparse_tensor
-- title: "Random number generation"
-  path: /guide/random_numbers
-- title: "NumPy API"
-  status: experimental
-  path: /guide/tf_numpy
-- title: "NumPy API Type Promotion"
-  status: nightly
-  path: /guide/tf_numpy_type_promotion
-- title: "DTensor concepts"
-  path: /guide/dtensor_overview
-  status: experimental
-- title: "Thinking in TensorFlow 2"
-  path: /guide/effective_tf2
+- heading: "Advanced"
+  style: divider
 
-- heading: "Customization"
-- title: "Create an op"
-  path: /guide/create_op
-- title: "Extension types"
-  path: /guide/extension_type
-  status: experimental
+- title: "Customization"
+  style: accordion
+  section:
+  - title: "Tensors and operations"
+    path: /tutorials/customization/basics
+  - title: "Custom layers"
+    path: /tutorials/customization/custom_layers
+  - title: "Custom training: walkthrough"
+    path: /tutorials/customization/custom_training_walkthrough
 
-- heading: "Data input pipelines"
-- title: "tf.data"
-  path: /guide/data
-- title: "Optimize pipeline performance"
-  path: /guide/data_performance
-- title: "Analyze pipeline performance"
-  path: /guide/data_performance_analysis
-
-- heading: "Import and export"
-- title: "Checkpoint"
-  path: /guide/checkpoint
-- title: "SavedModel"
-  path: /guide/saved_model
-- title: "Import a JAX model using JAX2TF"
-  status: new
-  path: /guide/jax2tf
-
-- heading: "Accelerators"
 - title: "Distributed training"
-  path: /guide/distributed_training
-- title: "GPU"
-  path: /guide/gpu
-- title: "TPU"
-  path: /guide/tpu
+  style: accordion
+  section:
+  - title: "Distributed training with Keras"
+    path: /tutorials/distribute/keras
+  - title: "Distributed training with DTensors"
+    path: /tutorials/distribute/dtensor_ml_tutorial
+    status: experimental
+  - title: "Using DTensors with Keras"
+    path: /tutorials/distribute/dtensor_keras_tutorial
+    status: experimental
+  - title: "Custom training loops"
+    path: /tutorials/distribute/custom_training
+  - title: "Multi-worker training with Keras"
+    path: /tutorials/distribute/multi_worker_with_keras
+  - title: "Multi-worker training with CTL"
+    path: /tutorials/distribute/multi_worker_with_ctl
+  - title: "Parameter Server Training"
+    path: /tutorials/distribute/parameter_server_training
+    status: experimental
+  - title: "Save and load"
+    path: /tutorials/distribute/save_and_load
+  - title: "Distributed input"
+    path: /tutorials/distribute/input
 
-- heading: "Performance"
-- title: "Better performance with tf.function"
-  path: /guide/function
-- title: "Profile TensorFlow performance"
-  path: /guide/profiler
-- title: "Optimize GPU Performance"
-  path: /guide/gpu_performance_analysis
-- title: "Graph optimization"
-  path: /guide/graph_optimization
-- title: "Mixed precision"
-  path: /guide/mixed_precision
+- title: "Vision"
+  style: accordion
+  section:
+  - title: "Computer vision"
+    path: /tutorials/images
+  - title: "KerasCV"
+    path: https://keras.io/keras_cv/
+    status: external
+  - title: "Convolutional Neural Network"
+    path: /tutorials/images/cnn
+  - title: "Image classification"
+    path: /tutorials/images/classification
+  - title: "Transfer learning and fine-tuning"
+    path: /tutorials/images/transfer_learning
+  - title: "Transfer learning with TF Hub"
+    path: /tutorials/images/transfer_learning_with_hub
+  - title: "Data Augmentation"
+    path: /tutorials/images/data_augmentation
+  - title: "Image segmentation"
+    path: /tutorials/images/segmentation
+  - title: "Object detection with TF Hub"
+    path: /hub/tutorials/tf2_object_detection
+    status: external
+  - title: "Video classification"
+    status: new
+    path: /tutorials/video/video_classification
+  - title: "Transfer learning with MoViNet"
+    status: new
+    path: /tutorials/video/transfer_learning_with_movinet
 
-- heading: "Model Garden"
-  status: new
-- title: "Overview"
-  path: /tfmodels
-- title: "Training with Orbit"
-  path: /tfmodels/orbit
-- title: "TFModels - NLP"
-  path: /tfmodels/nlp
-  status: external
-- include: /tfmodels/vision/_toc.yaml
+- title: "Text"
+  style: accordion
+  section:
+  - title: "Text and natural language processing"
+    path: /tutorials/text/index
+  - title: "Get started with KerasNLP"
+    path: https://keras.io/guides/keras_nlp/getting_started/
+    status: external
+  - title: "Text and NLP guide"
+    path: /text
+    status: external
 
-- heading: "Estimators"
+- title: "Audio"
+  style: accordion
+  section:
+  - title: "Simple audio recognition"
+    path: /tutorials/audio/simple_audio
+  - title: "Transfer learning for audio recognition"
+    path: /tutorials/audio/transfer_learning_audio
+  - title: "Generate music with an RNN"
+    path: /tutorials/audio/music_generation
+
+- title: "Structured data"
+  style: accordion
+  section:
+  - title: "Classify structured data with preprocessing layers"
+    path: /tutorials/structured_data/preprocessing_layers
+  - title: "Classification on imbalanced data"
+    path: /tutorials/structured_data/imbalanced_data
+  - title: "Time series forecasting"
+    path: /tutorials/structured_data/time_series
+  - title: "Decision forest models"
+    status: external
+    path: /decision_forests/tutorials/beginner_colab
+  - title: "Recommenders"
+    status: external
+    path: /recommenders/examples/quickstart
+
+- title: "Generative"
+  style: accordion
+  section:
+  - title: "Stable Diffusion"
+    status: new
+    path: /tutorials/generative/generate_images_with_stable_diffusion
+  - title: "Neural style transfer"
+    path: /tutorials/generative/style_transfer
+  - title: "DeepDream"
+    path: /tutorials/generative/deepdream
+  - title: "DCGAN"
+    path: /tutorials/generative/dcgan
+  - title: "Pix2Pix"
+    path: /tutorials/generative/pix2pix
+  - title: "CycleGAN"
+    path: /tutorials/generative/cyclegan
+  - title: "Adversarial FGSM"
+    path: /tutorials/generative/adversarial_fgsm
+  - title: "Intro to Autoencoders"
+    path: /tutorials/generative/autoencoder
+  - title: "Variational Autoencoder"
+    path: /tutorials/generative/cvae
+  - title: "Lossy data compression"
+    path: /tutorials/generative/data_compression
+
+- title: "Model optimization"
+  style: accordion
+  section:
+  - title: "Scalable model compression with EPR"
+    path: /tutorials/optimization/compression
+  - title: "TensorFlow model optimization"
+    status: external
+    path: /model_optimization
+
+- title: "Model Understanding"
+  style: accordion
+  section:
+  - title: "Integrated gradients"
+    path: /tutorials/interpretability/integrated_gradients
+  - title: "Uncertainty quantification with SNGP"
+    path: /tutorials/understanding/sngp
+  - title: "Probabilistic regression"
+    path: /probability/examples/Probabilistic_Layers_Regression
+    status: external
+
+- title: "Reinforcement learning"
+  style: accordion
+  section:
+  - title: "Actor-Critic method"
+    path: /tutorials/reinforcement_learning/actor_critic
+  - title: "TensorFlow agents"
+    status: external
+    path: /agents
+
+- title: "tf.Estimator"
+  style: accordion
   status: deprecated
-- title: "Estimator overview"
-  path: /guide/estimator
-
-- heading: "Appendix"
-- title: "Version compatibility"
-  path: /guide/versions
+  section:
+  - title: "Premade estimator"
+    path: /tutorials/estimator/premade
+  - title: "Linear model"
+    path: /tutorials/estimator/linear
+  - title: "Keras model to Estimator"
+    path: /tutorials/estimator/keras_model_to_estimator
+  - title: "Multi-worker training with Estimator"
+    path: /tutorials/distribute/multi_worker_with_estimator
+  - title: "Feature columns"
+    path: /tutorials/structured_data/feature_columns
